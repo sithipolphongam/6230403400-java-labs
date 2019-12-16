@@ -4,10 +4,10 @@
 *  favorite athlete is <athlete_name> who plays <sport_name> and has 
 * nationality as <athlete_nationality>”  
 *
-* Author: Manee Jaidee
-* ID: 623040123-4
+* Author: sithipol phongam
+* ID: 623040340-0
 * Sec: 1
-* Date: December 12, 2019
+* Date: December 16, 2019
 *
 **/
 package sithipol.lab2;
