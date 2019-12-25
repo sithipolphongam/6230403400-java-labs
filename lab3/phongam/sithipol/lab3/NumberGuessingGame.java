@@ -1,9 +1,9 @@
 /*
 Write a Java program called NumberGuessingGame that simulates a guessing game of which a user guesses number from 1 to 10. 
 The answer is randomly generated then a user enter a number via the console. 
-Each time a number is entered, one of the following three possible outputs will be displayed. 1. “Congratulations!”:
- if a number entered is the same as the answer, 2. “Try a lower number!”: if the number entered is higher than the answer, and 3. 
- “Try a higher number!”: if the number entered is smaller than the answer. 
+Each time a number is entered, one of the following three possible outputs will be displayed. 1. "Congratulations!":
+ if a number entered is the same as the answer, 2. "Try a lower number!": if the number entered is higher than the answer, and 3. 
+ "Try a higher number!": if the number entered is smaller than the answer. 
  The game ends when user guess the answer correctly or the user guess the number incorrectly five times. 
  
  Author: sithipol phongam
@@ -12,7 +12,7 @@ Each time a number is entered, one of the following three possible outputs will 
  Date Dec 23 2019
 
 */
-package sithipol.lab3;
+package phongam.sithipol.lab3;
 import java.lang.Math;
 import java.util.Scanner;
 public class NumberGuessingGame{

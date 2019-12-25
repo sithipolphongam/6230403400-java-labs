@@ -10,7 +10,7 @@ The program also contains a static int variable answer which contains the answer
  Date Dec 23 2019
 
 */
-package sithipol.lab3;
+package phongam.sithipol.lab3;
 import java.lang.Math;
 import java.util.Scanner;
 public class NumberGuessingMethodGame {
@@ -24,7 +24,6 @@ public class NumberGuessingMethodGame {
         int max = 10;
         int min = 1;
         final int answer = min + (int)(Math.random() * ((max - min) + 1));
-        System.out.println(answer);
         NumberGuessingMethodGame.answer = answer;
     }
     private static void playGame() {
