@@ -1,10 +1,9 @@
-package sithipol.lab4;
-
+package phongam.sithipol.lab4;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class Person {
-
+        // create variable
        private String name;
        private double height; 
        private double weight;
@@ -48,11 +47,13 @@ public class Person {
         }
         @Override
         public String toString() {
-            return "name=" + name + ", height=" + height + " cm. weight=" + weight + "kg.";
+            return "name=" + name + ", height=" + height + " cm., weight=" + weight + "kg.";
         }
+         // Number of people
         public static int getNumberofPerson() {
             return numberOfPerson;
-        }
+
+        } // Calculate BMI 
         public String getBMI() {
             double height = this.height;
             double weight = this.weight;
@@ -60,9 +61,5 @@ public class Person {
             NumberFormat formatter = new DecimalFormat("#0.00");
             return formatter.format(bmi);
         }
-       
-        
-        
-
-    
+         
 }

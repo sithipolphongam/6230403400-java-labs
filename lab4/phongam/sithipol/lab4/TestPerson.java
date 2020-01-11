@@ -9,7 +9,7 @@
  * Sec: 1
  * Date: January 6, 2020
 */
-package sithipol.lab4;
+package phongam.sithipol.lab4;
 public class TestPerson {
     public static void main(String[] args) {
         Person unknown = new Person();
