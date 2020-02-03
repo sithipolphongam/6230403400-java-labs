@@ -1,6 +1,5 @@
-
+package phongam.sithipol.lab6;
 import java.awt.BorderLayout;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,7 +10,7 @@ public class MySimpleWindow extends JFrame {
      *
      */
     private static final long serialVersionUID = 1L;
-    protected JFrame title;
+    protected JFrame mainframe;
     protected JButton okButton;
     protected JButton cancelButton;
     protected JPanel mainpanel,northpanel,southpanel,westpanel, eastpanel,centerpanel;;
@@ -27,35 +26,35 @@ public class MySimpleWindow extends JFrame {
     }
 
     public MySimpleWindow() {
-        this.title = new JFrame("My Simple Window Title");
+        this.mainframe = new JFrame("My Simple Window Title");
     }
 
     public MySimpleWindow(String title) {
-        this.title = new JFrame(title);
+        this.mainframe = new JFrame(title);
     }
 
     protected void addComponents() {
-        this.mainpanel = new JPanel();
-        this.southpanel = new JPanel();
-        this.northpanel = new JPanel();
-        this.centerpanel = new JPanel();
+        this.mainpanel = new JPanel(new BorderLayout());
         this.okButton = new JButton("OK");
         this.cancelButton = new JButton("Cancel");
-        // line 36-41 is create components
-        this.southpanel.add(cancelButton);
-        this.southpanel.add(okButton);
+        this.southpanel = new JPanel();
+        this.northpanel = new JPanel();
+        //this.mainframe.setLayout();
+        //line 36-41 is create components
+        this.southpanel.add(okButton, BorderLayout.EAST);
+        this.southpanel.add(cancelButton, BorderLayout.WEST);
         this.mainpanel.add(southpanel, BorderLayout.SOUTH);
-        this.title.add(mainpanel, BorderLayout.SOUTH);
+        this.mainframe.add(mainpanel);
+        
         // add to fram(title)
-
 
     }
  
     protected void setFrameFeatures() {
-        this.title.pack();
-        this.title.setLocationRelativeTo(null); //center of  display
-        this.title.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        this.title.setVisible(true);
+        this.mainframe.pack();
+        this.mainframe.setLocationRelativeTo(null); //center of  display
+        this.mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        this.mainframe.setVisible(true);
     }
 
 
@@ -68,4 +67,3 @@ public static void main(String[] args) {
 }
 
 }
-

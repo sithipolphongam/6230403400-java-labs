@@ -1,4 +1,7 @@
+package phongam.sithipol.lab6;
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -6,20 +9,20 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
-public class PersonFormV2 extends MySimpleWindow {
+public class PersonFormV2 extends PersonFormV1 {
     /**
      *
      */
     private static final long serialVersionUID = 1L;
     protected JLabel sportlb, notelb;
-    protected JPanel sportpanel, notelbpanel, notetextpanel, mainpanelV2;
+    protected JPanel allsportpanel,sportpanel, notepanel, sportboxpanel, allpanelV2;
     protected JComboBox boxsport;
     protected JTextArea noteTA;
 
     public static void createAndShowGUI() {
-        PersonFormV1 PersonFormV1 = new PersonFormV1("Person Form V1");
-        PersonFormV1.addComponents();
-        PersonFormV1.setFrameFeatures();
+        PersonFormV2 PersonFormV2 = new PersonFormV2("Person Form V2");
+        PersonFormV2.addComponents();
+        PersonFormV2.setFrameFeatures();
     }
 
     public static void main(String[] args) {
@@ -40,28 +43,38 @@ public class PersonFormV2 extends MySimpleWindow {
         super.addComponents();
         sportlb = new JLabel("Sport:");
         notelb = new JLabel("Note:");
-        noteTA = new JTextArea();
+
         sportpanel = new JPanel();
-        notelbpanel = new JPanel();
-        mainpanel = new JPanel();
-        String[] listOfSport = {"Running", "Swimming", "Tennis"};
-        boxsport = new JComboBox<>(listOfSport);
+        sportboxpanel = new JPanel();
+        notepanel = new JPanel();
+        allpanelV2 = new JPanel();
+        allsportpanel = new JPanel(new BorderLayout());
+
+        String[] listOfsport = {"Running", "Swimming", "Tennis"};
+        boxsport = new JComboBox<>(listOfsport);
 
         noteTA = new JTextArea(3, 35);
         noteTA.setLineWrap(true);
         noteTA.setWrapStyleWord(true);
         noteTA.setRows(2);
-        JScrollPane scrollpane = new JScrollPane(noteTA);
 
-        this.notelbpanel.add(notelb);
+        JScrollPane scroll = new JScrollPane(noteTA);
+        this.allpanelV2.setLayout(new BoxLayout(allpanelV2, BoxLayout.Y_AXIS));
+        this.notepanel.setLayout(new BorderLayout());
+        this.sportpanel.setLayout(new BorderLayout());
+        this.sportboxpanel.setLayout(new BorderLayout());
+        this.allsportpanel.setLayout(new GridLayout(0, 2));
+        this.sportpanel.add(sportlb, BorderLayout.WEST);
+        this.sportboxpanel.add(boxsport, BorderLayout.CENTER);
+        this.notepanel.add(notelb, BorderLayout.NORTH);
+        this.notepanel.add(scroll, BorderLayout.SOUTH);
 
-        this.sportpanel.add(sportlb);
-
-
-
-        this.mainpanelV2.add(sportpanel, BorderLayout.NORTH);
-        this.mainpanelV2.add(notelbpanel, BorderLayout.SOUTH);
-        this.title.add(mainpanelV2, BorderLayout.CENTER);
+        this.allsportpanel.add(sportpanel);
+        this.allsportpanel.add(sportboxpanel);
+        this.allpanelV2.add(allsportpanel);
+        this.allpanelV2.add(notepanel);
+        this.mainpanel.add(allpanelV2, BorderLayout.CENTER);
+        //
 
 
 
