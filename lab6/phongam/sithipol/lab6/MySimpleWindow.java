@@ -41,8 +41,9 @@ public class MySimpleWindow extends JFrame {
         this.northpanel = new JPanel();
         //this.mainframe.setLayout();
         //line 36-41 is create components
-        this.southpanel.add(okButton, BorderLayout.EAST);
-        this.southpanel.add(cancelButton, BorderLayout.WEST);
+        this.southpanel.add(cancelButton);
+        this.southpanel.add(okButton);
+        
         this.mainpanel.add(southpanel, BorderLayout.SOUTH);
         this.mainframe.add(mainpanel);
         
