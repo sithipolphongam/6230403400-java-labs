@@ -100,6 +100,3 @@ public class PersonFormV4 extends PersonFormV3 {
         super.addComponents();
     }
 }
-
-
-// ************** เหลือทำรูปให้เล็ก กับ คลิกไ้ 2 รอบ **************
