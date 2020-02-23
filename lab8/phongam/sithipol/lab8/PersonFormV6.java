@@ -9,7 +9,7 @@ public class PersonFormV6 extends PersonFormV5 implements  ActionListener {
     protected String typeString;
 
  public static void createAndShowGUI() {
-        PersonFormV6 PersonFormV6 = new PersonFormV6("Person Form V1");
+        PersonFormV6 PersonFormV6 = new PersonFormV6("Person Form V6");
         PersonFormV6.addComponents();
         PersonFormV6.addListeners();
         PersonFormV6.setFrameFeatures();
@@ -27,17 +27,17 @@ public class PersonFormV6 extends PersonFormV5 implements  ActionListener {
         super(title);
     }
 
-    @Override
+    @Override //override method in actionlistener interface
     public void actionPerformed(ActionEvent e) {
-       // JRadioButton testTpye;
-        if (e.getSource() == okButton) {
-            if  (student.isSelected()) {
+        Object obj = e.getSource();
+        if (obj == okButton) {
+            if  (student.isSelected()) { // getText from radiobutton student to tpyeString
                 typeString = student.getText();
             }
-            else if (teacher.isSelected()) {
+            else if (obj == teacher) { // getText from radiobutton teacher to tpyeString
                 typeString = teacher.getText();
             }
-
+            // show messagedialog if prees ok button
             JOptionPane.showMessageDialog(this,"Name : " + name.getText()
                                                + "\nHeight (cm) : " + height.getText() 
                                                + "\nWeight (kg) : " + weight.getText()
@@ -47,9 +47,9 @@ public class PersonFormV6 extends PersonFormV5 implements  ActionListener {
                                                + "\nHobbies : " + String.join(" ", hobbieslist.getSelectedValuesList())
                                                + "\nNote : " + noteTA.getText(), "Person Information", JOptionPane.INFORMATION_MESSAGE);
  
-        }
-        else if (e.getSource() == cancelButton) {
-
+        } // press cancelbuton
+        else if (obj == cancelButton) {
+            // clear text
                 this.name.setText("");
                 this.height.setText("");
                 this.weight.setText("");
@@ -60,7 +60,7 @@ public class PersonFormV6 extends PersonFormV5 implements  ActionListener {
 
     }
 
-    public void addListeners() {
+    public void addListeners() { // addlisteners to components
         this.okButton.addActionListener(this);
         this.cancelButton.addActionListener(this);
     }
