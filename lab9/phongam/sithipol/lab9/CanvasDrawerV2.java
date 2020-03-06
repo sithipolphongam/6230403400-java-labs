@@ -26,7 +26,6 @@ public class CanvasDrawerV2 extends CanvasDrawerV1 {
         keeperLeft = new Keeper(xLeftKeeper, yLeftKeeper);
         keeperRight = new Keeper(xRightKeeper, yRightKeeper);
 
-
     }
 
     @Override

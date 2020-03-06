@@ -5,6 +5,8 @@ public class Ball extends Ellipse2D.Double {
 
     public final static int BALL_DIAMETER = 30;
     private int  xVelocity, yVelocity;
+    // private int x = 0;
+    // private int y = 0;
 
     public Ball(int x, int y) {
         super(x, y, BALL_DIAMETER , BALL_DIAMETER);
@@ -33,7 +35,7 @@ public class Ball extends Ellipse2D.Double {
     public void setYvelocity(int yVelocity) {
         this.yVelocity = yVelocity;
     }
-    public void Move() {
+    public void move() {
         this.x += xVelocity;
         this.y += yVelocity;
     }
