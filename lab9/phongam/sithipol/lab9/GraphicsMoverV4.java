@@ -1,5 +1,8 @@
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
 package phongam.sithipol.lab9;
-
 import javax.swing.SwingUtilities;
 import java.awt.*;
 import phongam.sithipol.lab7.*;

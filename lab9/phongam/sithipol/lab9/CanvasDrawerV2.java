@@ -1,8 +1,11 @@
-package phongam.sithipol.lab9;
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
 
+package phongam.sithipol.lab9;
 import phongam.sithipol.lab7.CanvasDrawerV1;
 import java.awt.*;
-
 
 public class CanvasDrawerV2 extends CanvasDrawerV1 {
     protected Ball drawBall;
@@ -15,7 +18,7 @@ public class CanvasDrawerV2 extends CanvasDrawerV1 {
         super();
         int xBall = CANVAS_WIDTH/2-Ball.BALL_DIAMETER/2;
         int yBall = CANVAS_HEIGHT/2 - Ball.BALL_DIAMETER/2;
-        drawBall = new Ball(xBall, yBall);
+        drawBall = new Ball(xBall, yBall); // set position of the ball in panel 
 
         int xLeftKeeper = 0;
         int yLeftKeeper = CANVAS_HEIGHT/2 - Keeper.KEEPER_HEIGHT/2;
@@ -24,7 +27,7 @@ public class CanvasDrawerV2 extends CanvasDrawerV1 {
         int yRightKeeper = (CANVAS_HEIGHT/2 - Keeper.KEEPER_HEIGHT/2);
 
         keeperLeft = new Keeper(xLeftKeeper, yLeftKeeper);
-        keeperRight = new Keeper(xRightKeeper, yRightKeeper);
+        keeperRight = new Keeper(xRightKeeper, yRightKeeper); // set position of the keeper in the panel
 
     }
 
@@ -41,6 +44,7 @@ public class CanvasDrawerV2 extends CanvasDrawerV1 {
         g2d.setColor(Color.RED);
         g2d.fill(keeperRight);
         
+        // fill shape and color in panel
     } 
 
     

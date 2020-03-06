@@ -1,3 +1,8 @@
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
+
 package phongam.sithipol.lab9;
 import java.awt.BorderLayout;
 import java.awt.event.*;
@@ -28,7 +33,7 @@ public class FootballGameV2 extends FootballGameV1 implements KeyListener, Actio
         footballGameV2.setFrameFeatures();
         footballGameV2.addListeners();
     }
-
+    // add listener 
     public void addListeners() {
         moveup_btn.addActionListener(this);
         movedown_btn.addActionListener(this);
@@ -46,6 +51,7 @@ public class FootballGameV2 extends FootballGameV1 implements KeyListener, Actio
         mainframe.add(mainpanelgraphic);
     }
 
+    // override abstract method from ActionListener interface
     @Override 
     public void actionPerformed(ActionEvent e) {  
         super.actionPerformed(e);
@@ -69,7 +75,7 @@ public class FootballGameV2 extends FootballGameV1 implements KeyListener, Actio
         // TODO Auto-generated method stub
 
     }
-
+    // override abstract method from KeyListener interface
     @Override
     public void keyPressed(KeyEvent e) {
         int intkey = e.getKeyCode();

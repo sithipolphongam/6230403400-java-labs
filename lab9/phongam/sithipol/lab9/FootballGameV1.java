@@ -1,7 +1,10 @@
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
 package phongam.sithipol.lab9;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
-
 import javax.swing.SwingUtilities;
 
 public class FootballGameV1 extends GraphicsMoverV4 {
@@ -28,9 +31,9 @@ public class FootballGameV1 extends GraphicsMoverV4 {
 
     public void addComponents() {
         super.addComponents();
-        CanvasDrawerV3 test = new CanvasDrawerV3();
-        mainpanelgraphic.add(test, BorderLayout.CENTER);
-        mainframe.add(mainpanelgraphic);
+        CanvasDrawerV3 test = new CanvasDrawerV3(); // create object from CanvasDrawerV3 class.
+        mainpanelgraphic.add(test, BorderLayout.CENTER); // add test(object from CanvasDrawerV3 class) to mainpanelgraphic.
+        mainframe.add(mainpanelgraphic); // add mainpanelgraphic to mainframe.
       
     }
 

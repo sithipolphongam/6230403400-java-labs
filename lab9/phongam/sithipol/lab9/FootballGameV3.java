@@ -1,8 +1,10 @@
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
 package phongam.sithipol.lab9;
-
 import javax.swing.SwingUtilities;
 import java.awt.event.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.awt.BorderLayout;
 
 public class FootballGameV3 extends FootballGameV2  {
@@ -38,7 +40,7 @@ public class FootballGameV3 extends FootballGameV2  {
     @Override
     public void addComponents() {
         super.addComponents();
-        test = new CanvasDrawerV5();
+        test = new CanvasDrawerV5(); 
         mainpanelgraphic.add(test, BorderLayout.CENTER);
         mainframe.add(mainpanelgraphic);
     }
@@ -49,22 +51,13 @@ public class FootballGameV3 extends FootballGameV2  {
         reset_btn.addActionListener(this);
     }
 
-
+    // override abstract method from ActionListener interface
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
         if (obj == reset_btn) {
             khonkaenScore.setText("0");
             udonScore.setText("0");
-            // test.drawBall.x = 400 - 15;
-            // test.drawBall.y = 250 - 15;
-
-            // int random_xv = ThreadLocalRandom.current().nextInt(min, max+1);
-            // int random_yv = ThreadLocalRandom.current().nextInt(min, max+1);
-            // int xv = random_xv;
-            // int yv = random_yv;
-            // test.drawBall.setXvelocity(xv);
-            // test.drawBall.setYvelocity(yv);
             test.resetBall();
             mainpanelgraphic.add(test, BorderLayout.CENTER);
             mainframe.add(mainpanelgraphic);

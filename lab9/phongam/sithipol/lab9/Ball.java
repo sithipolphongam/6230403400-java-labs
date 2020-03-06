@@ -1,3 +1,7 @@
+/* Author: sithipol phongam
+* ID: 623040340-0
+* Sec: 1
+* Date: March 6, 2020 */
 package phongam.sithipol.lab9;
 import java.awt.geom.*;
 public class Ball extends Ellipse2D.Double {
